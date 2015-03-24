@@ -3,8 +3,8 @@ import SimpleOpenNI.*;
 boolean IS_RECORDING_MOD = false;
 
 int minZ = 0;
-int maxZ = 5000;
-int steps = 3;
+int maxZ = 1500;
+int steps = 4;
 int frames;
 float rotX = radians(180);
 float rotY = 0;
