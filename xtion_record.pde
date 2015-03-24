@@ -98,25 +98,27 @@ void keyPressed() {
 		minZ += 100;
 		println("minZ " + minZ);
 	}
-	else if(key == 'o') {
+	else if (key == 'o') {
 		steps++;
 		println("STEPS " + steps);
 	}
-	else if(key == 'p') {
+	else if (key == 'p') {
 		if (steps - 1 > 0) {
 			steps--;
 		}
 		println("STEPS " + steps);
 	}
-	else if( key == ' ' ) {
-		if(IS_RECORDING_MOD) {
+	else if ( key == ' ' ) {
+		if (IS_RECORDING_MOD) {
 
-	  // Convert frames to string and cut the string space
+			// Convert frames to string and cut the string space
 			saveStrings(dataPath("nbr_frames.txt"), split(frames + " ", " "));
 			println("Record " + frames + " frames");
 			exit();
 		}
 		else {
+			noLoop();
+
 			saveOniToPly();
 			exit();
 		}
@@ -143,8 +145,6 @@ void keyPressed() {
 }
 
 void saveOniToPly() {
-	noLoop();
-
 	frames = int(loadStrings(dataPath("nbr_frames.txt"))[0]);
 	int depthWidth = context.depthWidth();
 	int depthHeight = context.depthHeight();
