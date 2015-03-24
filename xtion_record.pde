@@ -4,7 +4,7 @@ boolean IS_RECORDING_MOD = false;
 
 int minZ = 0;
 int maxZ = 5000;
-int steps = 6;
+int steps = 3;
 int frames;
 float rotX = radians(180);
 float rotY = 0;
@@ -98,26 +98,25 @@ void keyPressed() {
 		minZ += 100;
 		println("minZ " + minZ);
 	}
-	else if (key == 'o') {
+	else if(key == 'o') {
 		steps++;
 		println("STEPS " + steps);
 	}
-	else if (key == 'p') {
+	else if(key == 'p') {
 		if (steps - 1 > 0) {
 			steps--;
 		}
 		println("STEPS " + steps);
 	}
-	else if (key == ' ') {
-		if (IS_RECORDING_MOD) {
+	else if( key == ' ' ) {
+		if(IS_RECORDING_MOD) {
 
-			// Convert frames to string and cut the string space
+	  // Convert frames to string and cut the string space
 			saveStrings(dataPath("nbr_frames.txt"), split(frames + " ", " "));
 			println("Record " + frames + " frames");
 			exit();
 		}
 		else {
-			noLoop();
 			saveOniToPly();
 			exit();
 		}
@@ -144,12 +143,13 @@ void keyPressed() {
 }
 
 void saveOniToPly() {
+	noLoop();
 
 	frames = int(loadStrings(dataPath("nbr_frames.txt"))[0]);
 	int depthWidth = context.depthWidth();
 	int depthHeight = context.depthHeight();
 
-	for (int i = 0; i < frames; i++) {
+	for(int i = 0; i < frames; i++) {
 
 		PrintWriter output = createWriter(dataPath("frame_" + i + ".ply"));
 		output.println("ply");
@@ -160,7 +160,6 @@ void saveOniToPly() {
 		int nbr_vertex = 0;
 		int index;
 		PVector[] realWorldMap = context.depthMapRealWorld();
-		PVector newPointPos;
 		PVector realWorldPoint;
 		String coord = "";
 
@@ -197,7 +196,4 @@ void saveOniToPly() {
 	}
 
 	println("recorded " + frames + " frames");
-
-	loop();
 }
-
