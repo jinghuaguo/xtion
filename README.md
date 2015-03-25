@@ -41,7 +41,7 @@ Press SPACE BAR to convert each frame to PLY files (it can take some times depen
 Convert to PRT
 --------------
 
-A small C++ script is also present in the data folder to allow conversion of PLY to PRT files.
+A small C++ script is also present to allow conversion of PLY to PRT files.
 First you have to compile the script with the following command (-lz parameters for zlib flag) :
 ```g++ -lz ply_to_prt.cpp```
 
