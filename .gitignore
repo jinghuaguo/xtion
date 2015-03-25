@@ -1,6 +1,3 @@
 .DS_Store
-/data/a.out
-/data/nbr_frames.txt
-/data/*.oni
-/data/*.ply
-/data/*.prt
+/a.out
+/data/
