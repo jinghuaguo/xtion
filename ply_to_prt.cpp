@@ -29,7 +29,7 @@ struct Particle {
 };
 
 int getFramesNumber() {
-	std::ifstream nbrFramesFile("nbr_frames.txt");
+	std::ifstream nbrFramesFile("data/nbr_frames.txt");
 	int numberFrames;
 
 	if (nbrFramesFile) {
@@ -55,7 +55,7 @@ int getFirstFrameNumber(std::string param) {
 std::string getValidFileName( int nbr ) {
 	std::stringstream plyFileName;
 	std::string fileFrameName;
-	plyFileName << "frame_" << nbr << ".ply";
+	plyFileName << "data/frame_" << nbr << ".ply";
 	fileFrameName = plyFileName.str();
 
 	return fileFrameName;
@@ -89,7 +89,7 @@ void moveToParticleData(std::ifstream &plyFile) {
 std::string getNewFileName(int nbr) {
 	std::stringstream prtFileName;
 	std::string fileFrameName;
-	prtFileName << "dataCloud" << nbr << ".prt";
+	prtFileName << "data/dataCloud" << nbr << ".prt";
 	fileFrameName = prtFileName.str();
 
 	return fileFrameName;

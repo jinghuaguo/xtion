@@ -1,5 +1,5 @@
-Xtion Record
-============
+Xtion
+=====
 
 This repo contains everything you need to capture an Xtion point cloud (or kinect) sequence to an ONI file, with the possibility to extract each frames to PLY file format.
 A C++ script is also present to convert PLY to PRT files, importable in Krakatoa.
@@ -41,7 +41,7 @@ Press SPACE BAR to convert each frame to PLY files (it can take some times depen
 Convert to PRT
 --------------
 
-A small C++ script is also present in the data folder to allow conversion of PLY to PRT files.
+A small C++ script is also present to allow conversion of PLY to PRT files.
 First you have to compile the script with the following command (-lz parameters for zlib flag) :
 ```g++ -lz ply_to_prt.cpp```
 
