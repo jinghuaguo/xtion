@@ -44,7 +44,6 @@ A small C++ script is also present to allow conversion of PLY to PRT files.
 First you have to compile the script with the following command (-lz parameters for zlib flag) :
 ```g++ -lz ply_to_prt.cpp```
 
-Then, execute it with :
-```./a.out```
+Then, execute it with ```./a.out```
 
 If you run out of memory, simply increase CHUNK variable by setting an higher number.
