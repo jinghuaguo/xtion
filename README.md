@@ -1,8 +1,10 @@
 Xtion
 =====
 
+Working in OSX Yosemite environment, I have not been able to use openframeworks with my Xtion device (ofxKinect does not work wit it, ofxOpenNI does not work with latest openframeworks version).
+
 This repo contains everything you need to capture an Xtion point cloud (or kinect) sequence to an ONI file, with the possibility to extract each frames to PLY file format.
-A C++ script is also present to convert PLY to PRT files, importable in Krakatoa.
+A C++ script is present to convert PLY to PRT files, importable in Krakatoa.
 
 It as been used on OSX using Yosemite.
 
@@ -32,10 +34,9 @@ Arrows could be used to move viewport.
 
 Press SPACE BAR to finish the record (needed to save the total frame number !).
 
-Then, you have to move the data folder to xtion_replay.
-You will be able to view your record.
+Using xtion_replay, you will be able to view your record.
 
-If everything looks good, move data to xtion_ply folder and press SPACE BAR to convert each frame to PLY files (it can take some times depending on captured point number you choosed).
+If everything looks good, move to xtion_ply folder programm to convert each frame to PLY files (it can take some times depending on captured point number parameter you choosed).
 
 Convert to PRT
 --------------
