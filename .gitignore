@@ -1,3 +1,4 @@
 .DS_Store
-/a.out
-/data/
+.ply
+.prt
+/xtion_ply/a.out
