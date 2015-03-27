@@ -11,9 +11,9 @@ It as been used on OSX using Yosemite.
 Requirements
 ------------
 
-* [Processing 2.x](https://processing.org/)
+* [Processing 1.5.x](https://processing.org/)
 * [OpenNI](https://code.google.com/p/simple-openni/downloads/list?can=1&q=&colspec=Filename+Summary+Uploaded+ReleaseDate+Size+DownloadCount) can be installed through this installer
-* [SimpleOpenNI](https://code.google.com/p/simple-openni/wiki/Installation)
+* [SimpleOpenNI 0.27](https://code.google.com/p/simple-openni/wiki/Installation)
 
 How to
 ------

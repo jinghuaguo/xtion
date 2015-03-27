@@ -12,7 +12,8 @@ SimpleOpenNI context;
 void setup() {
 	size(1024, 768, P3D);
 
-	context = new SimpleOpenNI(this, "record.oni");
+	context = new SimpleOpenNI(this);
+	context.openFileRecording("record.oni");
 
 	stroke(255, 255, 255);
 	perspective(radians(45), float(width) / float(height), 10, 150000);
